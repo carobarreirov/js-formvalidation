@@ -7,6 +7,7 @@ html {
 }
 
 .container {
+  max-width: 500px;
   position: absolute;
   top: 10%;
   left: 10%;
@@ -26,6 +27,13 @@ form {
 
 .text-center {
   text-align: center;
+}
+
+.message {
+  opacity: 0.6;
+  font-size: smaller;
+  margin-top: 0;
+  max-width: 90%;
 }
 
 input[type="text"],
@@ -62,4 +70,12 @@ button[type="submit"]:hover {
   text-transform: uppercase;
   opacity: 0.5;
   font-size: smaller;
+}
+
+.red {
+  color:red;
+}
+
+.green {
+  color:green;
 }
