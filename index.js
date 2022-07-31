@@ -1,10 +1,13 @@
 function verifyPassword() {
   var pw = document.getElementById("contrasena");
+  var btn = document.getElementById("registrar");
+
   if (pw.value.length < 8) {
     document.getElementById("pw-msj").innerHTML =
       "* La contraseña debe de tener al menos 8 caracteres";
     pw.focus();
     document.getElementById("pw-msj").classList.add("red");
+    btn.disabled = true;
     return false;
   } else {
     document.getElementById("pw-msj").innerHTML = "";
@@ -15,6 +18,7 @@ function verifyPassword() {
 function confirmPassword() {
   var pw = document.getElementById("contrasena").value;
   var pwc = document.getElementById("confirmacion");
+  var btn = document.getElementById("registrar");
 
   if (pw == pwc.value) {
     document.getElementById("pwc-msj").innerHTML =
@@ -27,6 +31,7 @@ function confirmPassword() {
     pwc.focus();
     pwc.value = "";
     document.getElementById("pwc-msj").classList.add("red");
+    btn.disabled = true;
     return;
   }
 }
