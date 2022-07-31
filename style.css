@@ -66,6 +66,11 @@ button[type="submit"]:hover {
   background-color: #041d3e;
 }
 
+button[type="submit"]:disabled {
+  background: #dddddd;
+  cursor:no-drop;
+}
+
 #l-condicion {
   text-transform: uppercase;
   opacity: 0.5;
