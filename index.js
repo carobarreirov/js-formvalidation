@@ -11,6 +11,7 @@ function verifyPassword() {
     return false;
   } else {
     document.getElementById("pw-msj").innerHTML = "";
+    btn.disabled = false;
     return;
   }
 }
@@ -24,6 +25,7 @@ function confirmPassword() {
     document.getElementById("pwc-msj").innerHTML =
       "¡Correcto! Las contraseñas coinciden.";
     document.getElementById("pwc-msj").classList.add("green");
+    btn.disabled = false;
     return false;
   } else {
     document.getElementById("pwc-msj").innerHTML =
