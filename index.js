@@ -25,8 +25,10 @@ function confirmPassword() {
     document.getElementById("pwc-msj").innerHTML =
       "¡Correcto! Las contraseñas coinciden.";
     document.getElementById("pwc-msj").classList.add("green");
-    btn.disabled = false;
-    return false;
+    if (verifyPassword()){
+      btn.disabled = false;
+    }else btn.disabled = true;
+    return;
   } else {
     document.getElementById("pwc-msj").innerHTML =
       "* Su contraseña no coincide. Intente de nuevo.";
@@ -34,7 +36,7 @@ function confirmPassword() {
     pwc.value = "";
     document.getElementById("pwc-msj").classList.add("red");
     btn.disabled = true;
-    return;
+    return false;
   }
 }
 
