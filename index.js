@@ -1,5 +1,6 @@
 function verifyPassword() {
   var pw = document.getElementById("contrasena");
+  var pwc = document.getElementById("confirmacion");
   var btn = document.getElementById("registrar");
 
   if (pw.value.length < 8) {
@@ -8,10 +9,12 @@ function verifyPassword() {
     pw.focus();
     document.getElementById("pw-msj").classList.add("red");
     btn.disabled = true;
+    pwc.disabled = true;
     return false;
   } else {
     document.getElementById("pw-msj").innerHTML = "";
     btn.disabled = false;
+    pwc.disabled = false;
     return;
   }
 }
